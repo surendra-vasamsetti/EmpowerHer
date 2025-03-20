@@ -1,3 +1,4 @@
+import { Text, View } from "react-native";
 import { Box, ScrollView } from "native-base";
 import Header from "../components/Header";
 import CarouselBanner from "../components/CarouselBanner";
@@ -11,8 +12,20 @@ export default function HomeScreen({ navigation }) {
     { id: 3, name: "Home & Kitchen", icon: "🏠" },
   ];
   const products = [
-    { id: 1, title: "Samsung Galaxy S23", price: 59999, discount: "10%", images: ["https://via.placeholder.com/100"] },
-    { id: 2, title: "iPhone 15", price: 75000, discount: "5%", images: ["https://via.placeholder.com/100"] },
+    {
+      id: 1,
+      title: "Samsung Galaxy S23",
+      price: 59999,
+      discount: "10%",
+      images: ["https://via.placeholder.com/100"],
+    },
+    {
+      id: 2,
+      title: "iPhone 15",
+      price: 75000,
+      discount: "5%",
+      images: ["https://via.placeholder.com/100"],
+    },
   ];
 
   return (
@@ -33,7 +46,11 @@ export default function HomeScreen({ navigation }) {
             Featured Products
           </Text>
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} navigation={navigation} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              navigation={navigation}
+            />
           ))}
         </Box>
       </ScrollView>
