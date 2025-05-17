@@ -50,9 +50,21 @@ function DrawerNavigator() {
 export default function AppNavigator() {
   return (
     <Stack.Navigator initialRouteName="SignIn">
-      <Stack.Screen name="SignIn" component={SignInScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="SignUp" component={SignUpScreen} options={{ headerShown: false }} />
-      <Stack.Screen name="MainApp" component={DrawerNavigator} options={{ headerShown: false }} />
+      <Stack.Screen
+        name="SignIn"
+        component={SignInScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="SignUp"
+        component={SignUpScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="MainApp"
+        component={DrawerNavigator}
+        options={{ headerShown: false }}
+      />
       <Stack.Screen name="Search" component={SearchScreen} />
       <Stack.Screen name="Product" component={ProductScreen} />
     </Stack.Navigator>

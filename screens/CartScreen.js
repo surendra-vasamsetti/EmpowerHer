@@ -13,7 +13,9 @@ export default function CartScreen() {
       </Text>
       {cartItems.map((item) => (
         <HStack key={item.id} justifyContent="space-between" mb={2}>
-          <Text>{item.name} (x{item.qty})</Text>
+          <Text>
+            {item.name} (x{item.qty})
+          </Text>
           <Text>₹{item.price * item.qty}</Text>
         </HStack>
       ))}
